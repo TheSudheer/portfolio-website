@@ -1,4 +1,20 @@
-/* Base styles */
+/* --- Global Styles & Variables --- */
+:root {
+    /* Natural Color Palette */
+    --primary-color: #2a9d8f; /* Persian Green / Muted Teal */
+    --primary-darker: #218a7e; /* Darker shade for hover */
+    --secondary-color: #e76f51; /* Burnt Sienna / Terracotta Orange */
+    --dark-color: #264653; /* Charcoal Blue/Green (Headings) */
+    --medium-color: #454545; /* Dark Gray (Body Text) */
+    --light-bg-card: #f7f5e9; /* Pale Parchment / Warm Off-White (Card Backgrounds) */
+    --bg-color: #fcfaf6; /* Very Light Warm Beige / Off-White (Page Background) */
+    --white-color: #ffffff; /* White (Container Background) */
+    --border-color: #e0e0e0; /* Light Gray Border */
+
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Slightly softer shadow */
+    --border-radius: 8px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,193 +22,358 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f5f7fa;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.container {
-    width: 100%;
-    max-width: 800px;
-    padding: 20px;
-    margin: 0 auto;
-}
-
-/* Header styles */
-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-h1 {
-    font-size: 42px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: #2c3e50;
-}
-
-.subtitle {
-    font-size: 18px;
-    color: #7f8c8d;
-    margin-bottom: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Main content styles */
-.card {
-    background-color: white;
-    border-radius: 10px;
-    padding: 40px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #2c3e50;
-    position: relative;
-    display: inline-block;
-}
-
-h2:after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #3498db;
-    margin: 10px auto 0;
-}
-
-p {
-    margin-bottom: 20px;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.7;
+    color: var(--medium-color);
+    background-color: var(--bg-color); /* Use new page background */
     font-size: 16px;
 }
 
-.bio {
-    max-width: 650px;
-    margin: 0 auto 30px;
-    line-height: 1.8;
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 25px 35px; /* Slightly more padding */
+    background-color: var(--white-color); /* Keep container white for clean content area */
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
 }
 
-/* Social links styles */
-.social-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin: 30px 0;
-}
-
-.social-btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 20px;
-    border-radius: 5px;
+/* --- Links & Buttons --- */
+a {
+    color: var(--primary-color);
     text-decoration: none;
-    color: white;
-    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-darker); /* Use darker primary shade */
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 28px; /* Slightly adjusted padding */
+    /* Gradient using natural tones */
+    background: linear-gradient(45deg, var(--secondary-color), #f4a261); /* Orange/Yellow gradient */
+    color: var(--white-color);
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(231, 111, 81, 0.3); /* Shadow matching secondary color */
+    font-size: 1em;
 }
 
-.social-btn i {
-    margin-right: 8px;
-    font-size: 18px;
-}
-
-.linkedin {
-    background-color: #0077b5;
-}
-
-.linkedin:hover {
-    background-color: #005f8e;
-}
-
-.blog {
-    background-color: #2962ff;
-}
-
-.blog:hover {
-    background-color: #0039cb;
-}
-
-.github {
-    background-color: #333;
-}
-
-.github:hover {
-    background-color: #1a1a1a;
-}
-
-/* Button styles */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    background-color: #3498db;
-    color: white;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-}
-
-.btn i {
+.button i {
     margin-right: 8px;
 }
 
-.btn:hover {
-    background-color: #2980b9;
+.button:hover {
+    background: linear-gradient(45deg, #e76f51, #e76f51); /* Solid secondary on hover */
+    box-shadow: 0 6px 12px rgba(231, 111, 81, 0.4);
+    transform: translateY(-2px);
 }
 
-.resume-btn {
-    background-color: #e74c3c;
+/* --- Header / Hero Section --- */
+.hero {
+    text-align: center;
+    padding: 45px 20px; /* Increased padding */
+    margin: -25px -35px 40px -35px; /* Extend hero to container edges, adjust bottom margin */
+    border-bottom: 1px solid var(--border-color);
+    /* Subtle background using the primary color with low opacity + texture */
+    background: linear-gradient(135deg, rgba(42, 157, 143, 0.05), rgba(255, 255, 255, 0.1)), url('https://www.transparenttextures.com/patterns/light-sketch.png');
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
-.resume-btn:hover {
-    background-color: #c0392b;
+.hero h1 {
+    font-size: 2.8em;
+    color: var(--dark-color); /* Use new dark heading color */
+    margin-bottom: 10px;
 }
 
-/* Footer styles */
+.hero h2 {
+    font-size: 1.4em;
+    color: var(--medium-color);
+    margin-bottom: 25px; /* Increased space */
+    font-weight: 400;
+}
+
+.contact-info {
+    margin-bottom: 25px;
+    font-size: 1em;
+    color: var(--medium-color);
+}
+
+.contact-info a, .contact-info span {
+    margin: 0 12px; /* Slightly more space */
+}
+
+.contact-info i {
+    margin-right: 6px;
+    color: var(--primary-color); /* Use primary color for icons */
+}
+
+.social-links {
+    margin-bottom: 30px; /* Increased space */
+}
+
+.social-links a {
+    font-size: 1.8em;
+    margin: 0 15px; /* More space between social icons */
+    color: var(--medium-color);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.resume-link {
+    margin-top: 25px;
+}
+
+/* --- Main Content Sections --- */
+main {
+    padding: 0 10px;
+}
+
+section {
+    margin-bottom: 50px; /* Increased spacing */
+    padding-bottom: 35px;
+}
+
+section:not(:last-of-type) {
+     border-bottom: 1px solid var(--border-color);
+}
+
+section h2 {
+    font-size: 1.9em;
+    color: var(--dark-color); /* Use new dark heading color */
+    margin-bottom: 30px; /* Increased space */
+    position: relative;
+    padding-bottom: 12px; /* Increased space */
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70px; /* Slightly longer underline */
+    height: 4px; /* Slightly thicker underline */
+    background-color: var(--primary-color);
+    border-radius: 3px;
+}
+
+section h2 i {
+    margin-right: 12px;
+    color: var(--primary-color);
+}
+
+section h3 {
+    font-size: 1.35em; /* Slightly larger sub-headings */
+    color: var(--dark-color);
+    margin-bottom: 15px;
+}
+
+section h3 i {
+    margin-right: 10px;
+    color: var(--secondary-color); /* Use secondary color for these icons */
+}
+
+p, ul {
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 12px; /* Slightly more space */
+    position: relative;
+    padding-left: 28px; /* More space for icon */
+}
+
+li::before {
+    content: '\f105';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 2px; /* Adjust vertical alignment */
+    color: var(--primary-color);
+    font-size: 1.1em; /* Slightly larger icon */
+}
+
+/* --- Specific Section Styling --- */
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Slightly larger min width */
+    gap: 30px; /* Increased gap */
+}
+
+.skill-category {
+    background-color: var(--light-bg-card); /* Use warm off-white for card background */
+    padding: 25px; /* Increased padding */
+    border-radius: var(--border-radius);
+    border: 1px solid #eee; /* Lighter border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.09); /* Slightly stronger shadow on hover */
+}
+
+.skill-category h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+/* Projects Section */
+.projects-grid {
+     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 30px;
+}
+
+.project {
+    background-color: var(--light-bg-card); /* Use warm off-white for card background */
+    border: 1px solid #eee;
+    border-radius: var(--border-radius);
+    padding: 30px; /* Increased padding */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.project h3 {
+    margin-top: 0;
+    color: var(--primary-color); /* Keep project titles in primary color */
+}
+
+.project ul {
+    flex-grow: 1;
+    margin-bottom: 18px;
+}
+
+.project ul li::before {
+    content: '\f00c';
+    color: var(--primary-color); /* Use primary color for checks */
+}
+
+.project .technologies {
+    font-size: 0.9em;
+    color: var(--medium-color);
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.project .project-link {
+    margin-top: auto;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.project .project-link i {
+    margin-right: 5px;
+}
+
+/* Education Section */
+.education-entry p {
+    margin-bottom: 5px;
+}
+
+/* Courses Section */
+#courses ul li::before {
+    content: '\f0a4'; /* Thumbs up icon */
+    color: var(--secondary-color); /* Use secondary color */
+}
+
+.cert-link i {
+    font-size: 0.8em;
+    margin-left: 5px;
+}
+
+
+/* --- Footer --- */
 footer {
     text-align: center;
-    margin-top: auto;
-    padding: 20px 0;
-    font-size: 14px;
-    color: #7f8c8d;
+    margin-top: 50px; /* Increased space */
+    padding-top: 25px; /* Increased space */
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9em;
+    color: #888; /* Lighter footer text */
 }
 
-/* Responsive styles */
+footer i {
+    margin: 0 3px;
+}
+footer i.fa-heart {
+    color: var(--secondary-color); /* Use secondary color for heart */
+}
+footer i.fa-code {
+    color: var(--primary-color); /* Use primary color for code */
+}
+
+
+/* --- Responsiveness (Keep previous media queries, ensure they work with new styles) --- */
+@media (max-width: 992px) {
+    .container {
+        max-width: 90%;
+        padding: 20px 25px;
+    }
+
+    .hero { margin: -20px -25px 30px -25px; } /* Adjust hero margin */
+    .hero h1 { font-size: 2.5em; }
+    .hero h2 { font-size: 1.3em; }
+    section h2 { font-size: 1.7em; }
+}
+
 @media (max-width: 768px) {
-    .card {
-        padding: 30px 20px;
+    body { font-size: 15px; }
+    .container { margin: 20px auto; max-width: 95%; }
+    .hero { margin: -20px -25px 20px -25px; padding: 35px 15px;}
+    .hero h1 { font-size: 2.2em; }
+    .hero h2 { font-size: 1.2em; }
+    section h2 { font-size: 1.6em; margin-bottom: 25px;}
+    section h3 { font-size: 1.25em; }
+
+    .skills-grid, .projects-grid {
+        grid-template-columns: 1fr; /* Stack items */
+        gap: 25px;
     }
-    
-    h1 {
-        font-size: 32px;
+
+    .contact-info a, .contact-info span {
+        display: block;
+        margin: 8px 0; /* Adjust vertical spacing */
     }
-    
-    h2 {
-        font-size: 24px;
-    }
-    
-    .social-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .social-btn {
-        width: 100%;
-        justify-content: center;
-    }
+    .social-links a { font-size: 1.7em; margin: 0 12px; }
+    .button { padding: 11px 22px; font-size: 0.95em;}
+}
+
+@media (max-width: 480px) {
+    body { font-size: 14px; }
+    .container { padding: 15px; border-radius: 0; box-shadow: none; margin: 0; max-width: 100%; }
+    .hero { padding: 30px 15px; border-radius: 0; margin: 0 0 20px 0;} /* Adjust hero margin */
+    .hero h1 { font-size: 2em; }
+    .hero h2 { font-size: 1.1em; }
+    section h2 { font-size: 1.5em; }
+    section h3 { font-size: 1.15em; }
+
+    .social-links a { font-size: 1.6em; }
+    .button { width: 100%; text-align: center; }
+    li { padding-left: 25px; } /* Adjust list padding */
+    li::before { font-size: 1em; top: 3px; } /* Adjust list icon */
 }

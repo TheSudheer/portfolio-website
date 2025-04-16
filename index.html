@@ -3,46 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudheer P - DevOps Engineer Resume</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Sudheer Pithani | DevOps Aspirant</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Sudheer P</h1>
-            <p class="subtitle">DevOps Engineer</p>
-        </header>
-        
-        <main>
-            <div class="card">
-                <h2>About Me</h2>
-                <p class="bio">DevOps enthusiast with hands-on project experience in CI/CD pipelines, containerization, and cloud technologies. Strong foundation in Linux administration, automation scripting, and infrastructure management. Seeking an entry-level position to leverage technical skills and contribute to organizational growth.</p>
-                
+        <header class="hero">
+            <div class="hero-content">
+                <h1>Sudheer Pithani</h1>
+                <h2>DevOps Enthusiast & Aspiring Cloud Engineer</h2>
+                <p class="contact-info">
+                    <a href="mailto:sudheerpithaniofficial@gmail.com"><i class="fas fa-envelope"></i> sudheerpithaniofficial@gmail.com</a>
+                    <span><i class="fas fa-phone"></i> +91 7036******</span> </p>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/iam-sudheer/" target="_blank" class="social-btn linkedin">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                    <a href="https://chaoticcontainers.hashnode.dev/" target="_blank" class="social-btn blog">
-                        <i class="fas fa-blog"></i> Personal Blog
-                    </a>
-                    <a href="https://github.com/TheSudheer/" target="_blank" class="social-btn github">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
+                    <a href="https://www.linkedin.com/in/iam-sudheer/" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/TheSudheer" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                    <a href="https://chaoticcontainers.hashnode.dev" target="_blank" aria-label="Personal Blog"><i class="fas fa-blog"></i></a>
                 </div>
-                
-                <a href="resume/Sudheer.pdf" class="btn resume-btn" target="_blank">
-                    <i class="fas fa-file-pdf"></i> View Resume
-                </a>
+                 <div class="resume-link">
+                    <a href="resume/Sudheer.pdf" target="_blank" class="button"><i class="fas fa-file-pdf"></i> View Resume</a>
+                </div>
             </div>
+        </header>
+
+        <main>
+            <section id="objective">
+                <h2><i class="fas fa-bullseye"></i> Career Objective</h2>
+                <p>DevOps enthusiast with hands-on project experience in CI/CD pipelines, containerization, and cloud technologies. Strong foundation in Linux administration, automation scripting, and infrastructure management. Seeking an entry-level position to leverage technical skills and contribute to organizational growth.</p>
+            </section>
+
+            <section id="skills">
+                <h2><i class="fas fa-cogs"></i> Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-tools"></i> DevOps Tools</h3>
+                        <p>Docker, Docker-Compose, Kubernetes, Helm, Terraform, Git & GitHub, Jenkins (CI/CD), Ansible, YAML</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-terminal"></i> Scripting</h3>
+                        <p>Bash, Groovy & Python</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fab fa-linux"></i> Operating Systems</h3>
+                        <p>Linux (Ubuntu)</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-network-wired"></i> Networking</h3>
+                        <p>TCP/IP, Routing, Switching, Firewalls, NFS, Subnetting, DNS & HTTP/S</p>
+                    </div>
+                     <div class="skill-category">
+                        <h3><i class="fab fa-aws"></i> Cloud</h3>
+                        <p>AWS (EC2, IAM, VPC, ECR & EKS)</p>
+                    </div>
+                     <div class="skill-category">
+                        <h3><i class="fas fa-server"></i> Web Servers</h3>
+                        <p>Nginx</p>
+                    </div>
+                     <div class="skill-category">
+                        <h3><i class="fas fa-hammer"></i> Build Tools</h3>
+                        <p>Maven, Gradle, PIP & NPM</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+                <div class="projects-grid">
+                    <article class="project">
+                        <h3>Microservices E-Commerce App Deployment</h3>
+                        <ul>
+                            <li>Deployed cloud-native microservices e-commerce app via Kubernetes.</li>
+                            <li>Managed infrastructure as code using Helm charts and Helmfile.</li>
+                        </ul>
+                        <p class="technologies"><strong>Tech:</strong> Kubernetes, Helm, Helmfile, Docker, Minikube</p>
+                        <p class="project-link"><a href="https://github.com/TheSudheer/Online-Bouquet" target="_blank"><i class="fab fa-github"></i> View on GitHub</a></p>
+                    </article>
+
+                    <article class="project">
+                        <h3>Cloud-Native Java CI/CD Pipeline</h3>
+                         <ul>
+                            <li>Automated Jenkins pipeline (shared libraries) for Java app build, containerization & deployment.</li>
+                            <li>Used Gradle for builds, Docker for images.</li>
+                            <li>Integrated AWS ECR for image storage, deployed to EKS.</li>
+                        </ul>
+                        <p class="technologies"><strong>Tech:</strong> Jenkins, Gradle, Docker, AWS ECR, AWS EKS, Kubernetes</p>
+                        <p class="project-link"><a href="https://github.com/TheSudheer/java-gradle-project/tree/feat/eks-deployment-pipeline" target="_blank"><i class="fab fa-github"></i> View on GitHub</a></p>
+                    </article>
+
+                    <article class="project">
+                        <h3>Automated AWS Nginx Deployment</h3>
+                         <ul>
+                            <li>Provisioned secure AWS infrastructure (VPC, EC2, SG) using Terraform (IaC).</li>
+                            <li>Deployed Nginx via Docker using Terraform provisioners & Bash.</li>
+                            <li>Implemented reusable Terraform modules for networking components.</li>
+                        </ul>
+                        <p class="technologies"><strong>Tech:</strong> Terraform, AWS (EC2, VPC, IAM, SG), Docker, Nginx, Bash</p>
+                        <p class="project-link"><a href="https://github.com/TheSudheer/terraform-project/tree/feature/modules" target="_blank"><i class="fab fa-github"></i> View on GitHub</a></p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="education">
+                <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                <div class="education-entry">
+                    <h3>Bachelor of Technology in Electrical and Electronics</h3>
+                    <p>Aditya College of Engineering & Technology, 2024 (CGPA: 7.09)</p>
+                </div>
+            </section>
+
+            <section id="courses">
+                <h2><i class="fas fa-certificate"></i> Courses & Certificates</h2>
+                <ul>
+                    <li>Linux Basics with Hands-On Labs (KodeKloud) | <a href="https://drive.google.com/file/d/1ajKqToANO_2mXvaEoI1Q1EYv2L9QwBRl/view" target="_blank" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a></li>
+                    <li>Kubernetes for Beginners with Hands-on-Labs (KodeKloud) | <a href="https://drive.google.com/file/d/1a2cNM0BqBNJPlXrW5US62SQyNBs5q6Xm/view" target="_blank" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a></li>
+                    <li>Docker Course with Hands-On Labs (KodeKloud) | <a href="https://drive.google.com/file/d/1kDD62C8euaErn8DS7GUr76tt17jUMJrm/view" target="_blank" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a></li>
+                    <li>Git for Beginners with Hands-on-Labs (KodeKloud) | <a href="https://drive.google.com/file/d/1r4OtwpZOrllsq65WQBZhYV_8n9lUiQTb/view" target="_blank" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a></li>
+                </ul>
+            </section>
+
+            <section id="soft-skills">
+                <h2><i class="fas fa-comments"></i> Soft Skills</h2>
+                 <ul>
+                    <li>Proactive self-starter with strong analytical and problem-solving skills.</li>
+                    <li>Effective verbal and written communication in English.</li>
+                </ul>
+            </section>
+
+             <section id="activities">
+                <h2><i class="fas fa-lightbulb"></i> Additional Activities</h2>
+                <p>Maintain a technical blog sharing educational content on Linux and DevOps at <a href="https://chaoticcontainers.hashnode.dev" target="_blank">chaoticcontainers.hashnode.dev <i class="fas fa-external-link-alt"></i></a>.</p>
+             </section>
         </main>
-        
+
         <footer>
-            <p>&copy; 2025 Sudheer P. All rights reserved.</p>
+            <p>&copy; 2025 Sudheer Pithani. Built with <i class="fas fa-heart"></i> & <i class="fas fa-code"></i>.</p>
         </footer>
-    </div>
-</body>
+    </div> </body>
 </html>
