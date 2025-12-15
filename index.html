@@ -3,152 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudheer Pithani | DevOps Aspirant</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Sudheer Pithani - DevOps Engineer Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
-    <div class="container">
-        <header class="hero">
-             <button id="darkModeToggle" aria-label="Toggle Dark Mode">
-                <i class="fas fa-moon"></i> </button>
-            <div class="hero-content">
-                <h1>Sudheer Pithani</h1>
-                <h2>DevOps Enthusiast & Aspiring DevOps Engineer</h2>
-                <p class="contact-info">
-                    <a href="mailto:sudheerpithaniofficial@gmail.com"><i class="fas fa-envelope"></i> sudheerpithaniofficial@gmail.com</a>
-                    <span><i class="fas fa-phone"></i> +91 7036779156</span> </p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/iam-sudheer/" target="_blank" aria-label="LinkedIn Profile">
-                        <i class="fab fa-linkedin"></i><span class="social-label">LinkedIn</span>
-                    </a>
-                    <a href="https://github.com/TheSudheer" target="_blank" aria-label="GitHub Profile">
-                        <i class="fab fa-github"></i><span class="social-label">GitHub</span>
-                    </a>
-                    <a href="https://chaoticcontainers.hashnode.dev" target="_blank" aria-label="Personal Blog">
-                        <i class="fas fa-blog"></i><span class="social-label">Blog</span>
-                    </a>
-                </div>
-                 <div class="resume-link">
-                    <a href="resume/Sudheer.pdf" target="_blank" class="button"><i class="fas fa-file-pdf"></i> View Resume</a>
+<body class="light-mode">
+    <header class="header">
+        <div class="container">
+            <h1 class="header-name">Sudheer Pithani <span class="devops-tag">// DevOps Engineer</span></h1>
+            <nav class="header-nav">
+                <a href="#summary">Summary</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#blog" target="_blank">Blog</a>
+            </nav>
+            <div class="header-actions">
+                <button id="toggle-theme-btn" class="icon-btn" aria-label="Toggle Dark/Light Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="Sudheer_DevOps_Resume.pdf" target="_blank" class="btn primary-btn">
+                    <i class="fas fa-file-pdf"></i> View Resume
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content container">
+
+        <section id="summary" class="section">
+            <h2 class="section-title"><i class="fas fa-terminal"></i> SUMMARY</h2>
+            <div class="card">
+                <p>DevOps Engineer with a strong background in **Linux System Administration**. Implementing **Infrastructure as Code (IaC)** with Terraform, Automating deployment workflows using **CI/CD** (Jenkins), and managing **containerized workloads on ECS/EKS**.</p>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> sudheerpithaniofficial@gmail.com</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 7036779156</p>
+                    <p class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://chaoticcontainers.dev" target="_blank"><i class="fas fa-pencil-alt"></i> Technical Blog</a>
+                    </p>
                 </div>
             </div>
-        </header>
+        </section>
 
-        <main>
-            <section id="objective">
-                <h2><i class="fas fa-bullseye"></i> Career Objective</h2>
-                <p>Aspiring DevOps Engineer with hands-on project experience in CI/CD pipelines, containerization, and cloud technologies. Strong foundation in Linux administration, automation scripting, and infrastructure management. Seeking an entry-level position to leverage technical skills and contribute to organizational growth.</p>
-            </section>
-
-            <section id="skills">
-                <h2><i class="fas fa-stream"></i> Technical Skills</h2> 
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3><i class="fas fa-cogs"></i> DevOps Tools & Automation</h3> 
-                        <p>Docker, Docker-Compose, Kubernetes, Helm, Terraform, Git & GitHub, Jenkins (CI/CD), Ansible, YAML, Nginx</p> 
-                    </div>
-                    <div class="skill-category">
-                        <h3><i class="fas fa-terminal"></i> Scripting</h3>
-                        <p>Bash, Groovy & Python</p>
-                    </div>
-                    <div class="skill-category">
-                        <h3><i class="fab fa-linux"></i> Operating Systems</h3>
-                        <p>Linux (Ubuntu)</p>
-                    </div>
-                    <div class="skill-category">
-                        <h3><i class="fas fa-network-wired"></i> Networking</h3>
-                        <p>TCP/IP, Routing, Switching, Firewalls, NFS, Subnetting, DNS & HTTP/S</p>
-                    </div>
-                     <div class="skill-category">
-                        <h3><i class="fas fa-cloud"></i> Cloud Platforms</h3> 
-                        <p>AWS (EC2, IAM, VPC, ECR & EKS), GCP (Compute Engine, VPC, Firewall)</p> 
-                    </div>
-                    <div class="skill-category">
-                        <h3><i class="fas fa-hammer"></i> Build Tools</h3>
-                        <p>Maven, Gradle, PIP & NPM</p>
-                    </div>
-                    </div> 
-            </section>
-
-            <section id="projects">
-                <h2><i class="fas fa-tasks"></i> Projects</h2> 
-                <div class="projects-grid">
-                    <article class="project">
-                        <h3>Microservices E-Commerce App Deployment</h3>
-                        <ul>
-                            <li><i class="fas fa-check-circle"></i> Deployed cloud-native microservices e-commerce app via Kubernetes.</li>
-                            <li><i class="fas fa-check-circle"></i> Managed infrastructure as code using Helm charts and Helmfile.</li>
-                        </ul>
-                        <p class="technologies"><strong>Tech:</strong> Kubernetes, Helm, Helmfile, Docker, Minikube</p>
-                        <p class="project-link"><a href="https://github.com/TheSudheer/Online-Bouquet" target="_blank"><i class="fab fa-github"></i> View on GitHub</a></p>
-                    </article>
-
-                    <article class="project">
-                        <h3>Cloud-Native Java CI/CD Pipeline</h3>
-                         <ul>
-                            <li><i class="fas fa-check-circle"></i> Automated Jenkins pipeline (shared libraries) for Java app build, containerization & deployment.</li>
-                            <li><i class="fas fa-check-circle"></i> Utilized Gradle for builds, Docker for images.</li>
-                            <li><i class="fas fa-check-circle"></i> Integrated AWS ECR for image storage, deployed to EKS.</li>
-                        </ul>
-                        <p class="technologies"><strong>Tech:</strong> Jenkins, Gradle, Docker, AWS ECR, AWS EKS, Kubernetes</p>
-                        <p class="project-link"><a href="https://github.com/TheSudheer/java-gradle-project/tree/feat/eks-deployment-pipeline" target="_blank"><i class="fab fa-github"></i> View on GitHub</a></p>
-                    </article>
-
-                    <article class="project">
-                        <h3>Automated AWS Nginx Deployment</h3>
-                         <ul>
-                            <li><i class="fas fa-check-circle"></i> Provisioned secure AWS infrastructure (VPC, EC2, SG) using Terraform (IaC).</li>
-                            <li><i class="fas fa-check-circle"></i> Deployed Nginx via Docker using Terraform provisioners & Bash.</li>
-                            <li><i class="fas fa-check-circle"></i> Implemented reusable Terraform modules for networking.</li>
-                        </ul>
-                        <p class="technologies"><strong>Tech:</strong> Terraform, AWS (EC2, VPC, IAM, SG), Docker, Nginx, Bash</p>
-                        <p class="project-link"><a href="https://github.com/TheSudheer/terraform-project/tree/feature/modules" target="_blank"><i class="fab fa-github"></i> View on GitHub</a></p>
-                    </article>
-
-                    <article class="project"> 
-                        <h3>Multi-Cloud Web Server Deployment (AWS & GCP)</h3>
-                         <ul>
-                             <li><i class="fas fa-check-circle"></i> Automated NGINX provisioning on AWS (EC2) & GCP (Compute Engine) via Terraform.</li>
-                             <li><i class="fas fa-check-circle"></i> Enforced IP-restricted SSH/HTTP access and configured NGINX on port 8080 using startup scripts.</li>
-                             <li><i class="fas fa-check-circle"></i> Mapped `multi-cloud.local` via `/etc/hosts` for local access.</li>
-                         </ul>
-                        <p class="technologies"><strong>Tech:</strong> Terraform, AWS (EC2, VPC, SG), GCP (Compute Engine, VPC, Firewall), NGINX, Bash</p>
-                        <p class="project-link"><a href="https://github.com/TheSudheer/multi-cloud-deployment" target="_blank"><i class="fab fa-github"></i> View on GitHub</a></p>
-                    </article>
+        <section id="skills" class="section">
+            <h2 class="section-title"><i class="fas fa-wrench"></i> TECHNICAL SKILLS</h2>
+            <div class="skills-grid">
+                <div class="skill-category card">
+                    <h3><i class="fas fa-laptop-code"></i> DevOps Tools</h3>
+                    <p>Kubernetes, Docker, Docker Compose, Helm, Terraform, Jenkins (CI/CD), Git, GitHub, Nexus, Ansible, Nginx</p>
                 </div>
-            </section>
-
-            <section id="education">
-                <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-                <div class="education-entry">
-                    <h3>Bachelor of Technology in Electrical and Electronics</h3>
-                    <p>Aditya College of Engineering & Technology, 2024 (CGPA: 7.09)</p>
+                <div class="skill-category card">
+                    <h3><i class="fas fa-cloud"></i> Cloud Platforms</h3>
+                    <p>AWS (EC2, IAM, VPC, ECR, EKS), GCP (Compute Engine, VPC, Firewall Rules)</p>
                 </div>
-            </section>
+                <div class="skill-category card">
+                    <h3><i class="fas fa-code"></i> Scripting / OS</h3>
+                    <p>Bash, Groovy, Python | Linux (Ubuntu, RHEL, CentOS)</p>
+                </div>
+                <div class="skill-category card">
+                    <h3><i class="fas fa-network-wired"></i> Networking / Build</h3>
+                    <p>TCP/IP, Routing, DNS, HTTP/S | Maven, Gradle, PIP, NPM</p>
+                </div>
+            </div>
+        </section>
 
-            <section id="courses">
-                <h2><i class="fas fa-certificate"></i> Courses & Certificates</h2>
+        <section id="experience" class="section">
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> PROFESSIONAL EXPERIENCE</h2>
+            <div class="job-card card">
+                <h3>Associate DevOps Engineer <span class="company">@ CloudFulcrum</span></h3>
+                <p class="duration"><i class="fas fa-calendar-alt"></i> Jan 2025 - Present | Hyderabad, India</p>
                 <ul>
-                    <li><i class="fas fa-award"></i> Linux Basics with Hands-On Labs (KodeKloud) | <a href="https://drive.google.com/file/d/1ajKqToANO_2mXvaEoI1Q1EYv2L9QwBRl/view" target="_blank" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a></li>
-                    <li><i class="fas fa-award"></i> Kubernetes for Beginners with Hands-on-Labs (KodeKloud) | <a href="https://drive.google.com/file/d/1a2cNM0BqBNJPlXrW5US62SQyNBs5q6Xm/view" target="_blank" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a></li>
-                    <li><i class="fas fa-award"></i> Docker Course with Hands-On Labs (KodeKloud) | <a href="https://drive.google.com/file/d/1kDD62C8euaErn8DS7GUr76tt17jUMJrm/view" target="_blank" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a></li>
-                    <li><i class="fas fa-award"></i> Git for Beginners with Hands-on-Labs (KodeKloud) | <a href="https://drive.google.com/file/d/1r4OtwpZOrllsq65WQBZhYV_8n9lUiQTb/view" target="_blank" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a></li>
+                    <li>Designed and maintained **CI/CD pipelines using Jenkins** to automate build, test, and deployment workflows for Java applications.</li>
+                    <li>Provisioned AWS infrastructure (EC2, VPC, Security Groups) using **Terraform (IaC)**.</li>
+                    <li>Automated configuration management using **Ansible** for server setup (Node.js and Nexus deployment).</li>
+                    <li>Deployed containerized services to an **AWS EKS cluster** using basic Kubernetes objects.</li>
+                    <li>Containerized applications using optimized **Dockerfiles (multi-stage builds)**, and pushed images to **Amazon ECR** and Nexus Docker registries.</li>
+                    <li>Managed and maintained underlying **Linux server environments** (RHEL/Ubuntu).</li>
                 </ul>
-            </section>
+            </div>
+        </section>
 
-            <section id="activities">
-                <h2><i class="fas fa-feather-alt"></i> Additional Activities</h2>
-                <p>Author of a <a href="https://chaoticcontainers.hashnode.dev" target="_blank">technical blog</a> featuring educational content and practical examples focused on Linux and DevOps technologies.</p>
-             </section>
-        </main>
+        <section id="projects" class="section">
+            <h2 class="section-title"><i class="fas fa-rocket"></i> PERSONAL PROJECTS</h2>
+            <div class="project-card card">
+                <h3>Microservices E-Commerce Application Deployment</h3>
+                <p>Orchestrated the deployment of cloud-native microservices on **Kubernetes**, enhancing scalability and resilience. Implemented IaC using **Helm charts and Helmfile** for consistent deployment.</p>
+                <p class="tech-stack">**Technologies:** Kubernetes, Helm, Helmfile, Docker, Minikube, NodePort</p>
+                <a href="#" target="_blank" class="github-link"><i class="fab fa-github"></i> View Code</a>
+            </div>
+            <div class="project-card card">
+                <h3>Cloud-Native Java CI/CD Pipeline with AWS ECR & EKS</h3>
+                <p>Developed an automated CI/CD pipeline using **Jenkins shared libraries** for Java application build (Gradle), containerization (Docker), and deployment. Integrated **AWS ECR** for secure storage and configured automated deployment to an **AWS EKS** cluster.</p>
+                <p class="tech-stack">**Technologies:** Jenkins, Gradle, Docker, AWS ECR, AWS EKS, Kubernetes</p>
+                <a href="#" target="_blank" class="github-link"><i class="fab fa-github"></i> View Code</a>
+            </div>
+        </section>
 
-        <footer>
-            <p>&copy; <span id="currentYear"></span> Sudheer Pithani. Crafted with <i class="fas fa-code"></i> & <i class="fas fa-coffee"></i>.</p>
-        </footer>
-    </div> <script src="script.js"></script>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Sudheer Pithani | Built with <i class="fas fa-heart"></i> and **DevOps Principles**</p>
+        <p>Education: B.Tech in Electrical and Electronics, 2024 (CGPA: 7.09)</p>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
