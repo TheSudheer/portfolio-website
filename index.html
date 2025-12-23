@@ -3,46 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudheer Pithani - DevOps Engineer Portfolio</title>
+    <title>Sudheer Pithani - Associate DevOps Administrator</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body class="light-mode">
+<body class="dark-mode"> 
     <header class="header">
-        <div class="container">
-            <h1 class="header-name">Sudheer Pithani <span class="devops-tag">// DevOps Engineer</span></h1>
+        <div class="container header-flex">
+            <div class="brand">
+                <h1 class="header-name">Sudheer Pithani</h1> 
+                <span class="devops-tag">// Associate DevOps Administrator</span>
+            </div>
+            
             <nav class="header-nav">
                 <a href="#summary">Summary</a>
                 <a href="#skills">Skills</a>
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
-                <a href="#blog" target="_blank">Blog</a>
+                <a href="#blog">Blog</a>
+                <a href="#education">Education</a>
             </nav>
+
             <div class="header-actions">
-                <button id="toggle-theme-btn" class="icon-btn" aria-label="Toggle Dark/Light Mode">
-                    <i class="fas fa-moon"></i>
+                <a href="https://www.linkedin.com/in/iam-sudheer/" target="_blank" class="social-btn" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/TheSudheer" target="_blank" class="social-btn" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://chaoticcontainers.hashnode.dev/" target="_blank" class="social-btn" title="Blog">
+                    <i class="fas fa-rss"></i>
+                </a>
+                
+                <div class="divider"></div>
+
+                <button id="toggle-theme-btn" class="icon-btn theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-sun"></i>
                 </button>
-                <a href="resume/Sudheer_DevOps_Resume.pdf" target="_blank" class="btn primary-btn">
-                    <i class="fas fa-file-pdf"></i> View Resume
+                <a href="resume/Sudheer_DevOps_Resume.pdf" target="_blank" class="btn primary-btn resume-btn">
+                    <i class="fas fa-file-pdf"></i> Resume
                 </a>
             </div>
         </div>
     </header>
 
     <main class="main-content container">
-
         <section id="summary" class="section">
             <h2 class="section-title"><i class="fas fa-terminal"></i> SUMMARY</h2>
             <div class="card">
-                <p>DevOps Engineer with a strong background in **Linux System Administration**. Implementing **Infrastructure as Code (IaC)** with Terraform, Automating deployment workflows using **CI/CD** (Jenkins), and managing **containerized workloads on ECS/EKS**.</p>
-                <div class="contact-info">
+                <p><strong>Associate DevOps Administrator</strong> with a strong background in <strong>Linux System Administration</strong>. Experienced in implementing <strong>Infrastructure as Code (IaC)</strong> with Terraform, automating deployment workflows using <strong>CI/CD</strong>, and managing containerized workloads on AWS ECS/EKS.</p>
+                <div class="contact-bar">
                     <p><i class="fas fa-envelope"></i> sudheerpithaniofficial@gmail.com</p>
                     <p><i class="fas fa-phone-alt"></i> +91 7036779156</p>
-                    <p class="social-links">
-                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                        <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="https://chaoticcontainers.dev" target="_blank"><i class="fas fa-pencil-alt"></i> Technical Blog</a>
-                    </p>
                 </div>
             </div>
         </section>
@@ -75,39 +87,107 @@
                 <h3>Associate DevOps Engineer <span class="company">@ CloudFulcrum</span></h3>
                 <p class="duration"><i class="fas fa-calendar-alt"></i> Jan 2025 - Present | Hyderabad, India</p>
                 <ul>
-                    <li>Designed and maintained **CI/CD pipelines using Jenkins** to automate build, test, and deployment workflows for Java applications.</li>
-                    <li>Provisioned AWS infrastructure (EC2, VPC, Security Groups) using **Terraform (IaC)**.</li>
-                    <li>Automated configuration management using **Ansible** for server setup (Node.js and Nexus deployment).</li>
-                    <li>Deployed containerized services to an **AWS EKS cluster** using basic Kubernetes objects.</li>
-                    <li>Containerized applications using optimized **Dockerfiles (multi-stage builds)**, and pushed images to **Amazon ECR** and Nexus Docker registries.</li>
-                    <li>Managed and maintained underlying **Linux server environments** (RHEL/Ubuntu).</li>
+                    <li>Designed and maintained <strong>CI/CD pipelines using Jenkins</strong> to automate workflows for Java applications.</li>
+                    <li>Provisioned AWS infrastructure using <strong>Terraform (IaC)</strong>.</li>
+                    <li>Automated server setup using <strong>Ansible</strong> for Node.js and Nexus deployments.</li>
+                    <li>Deployed services to <strong>AWS EKS</strong> clusters.</li>
+                    <li>Containerized applications using <strong>multi-stage Docker builds</strong>.</li>
+                    <li>Maintained <strong>Linux (RHEL/Ubuntu)</strong> server environments.</li>
                 </ul>
             </div>
         </section>
 
         <section id="projects" class="section">
             <h2 class="section-title"><i class="fas fa-rocket"></i> PERSONAL PROJECTS</h2>
+            
             <div class="project-card card">
-                <h3>Microservices E-Commerce Application Deployment</h3>
-                <p>Orchestrated the deployment of cloud-native microservices on **Kubernetes**, enhancing scalability and resilience. Implemented IaC using **Helm charts and Helmfile** for consistent deployment.</p>
-                <p class="tech-stack">**Technologies:** Kubernetes, Helm, Helmfile, Docker, Minikube, NodePort</p>
-                <a href="#" target="_blank" class="github-link"><i class="fab fa-github"></i> View Code</a>
+                <h3>Node.js Web App CI/CD Pipeline</h3>
+                <p>Automated CI/CD pipeline for React.js application with Docker containerization. Pipeline tests the app, builds Docker images, pushes to Docker Hub, and deploys to <strong>AWS EC2</strong> with zero-downtime deployment strategy.</p>
+                <p class="tech-stack">Jenkins, Docker, AWS EC2, React.js, Node.js</p>
+                <a href="https://github.com/TheSudheer/nodejs-web-app-ci-cd-pipeline" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i> View Code
+                </a>
             </div>
+
             <div class="project-card card">
-                <h3>Cloud-Native Java CI/CD Pipeline with AWS ECR & EKS</h3>
-                <p>Developed an automated CI/CD pipeline using **Jenkins shared libraries** for Java application build (Gradle), containerization (Docker), and deployment. Integrated **AWS ECR** for secure storage and configured automated deployment to an **AWS EKS** cluster.</p>
-                <p class="tech-stack">**Technologies:** Jenkins, Gradle, Docker, AWS ECR, AWS EKS, Kubernetes</p>
-                <a href="#" target="_blank" class="github-link"><i class="fab fa-github"></i> View Code</a>
+                <h3>Java/Gradle App - AWS ECR & EKS Deployment</h3>
+                <p>Complete CI/CD pipeline using <strong>Jenkins Shared Libraries</strong> to build Java/Gradle applications, push images to <strong>AWS ECR</strong>, and deploy to <strong>AWS EKS</strong> clusters with automated Kubernetes manifest deployment.</p>
+                <p class="tech-stack">Jenkins, Gradle, AWS ECR, AWS EKS, Kubernetes, Docker</p>
+                <a href="https://github.com/TheSudheer/eks-deployment-pipeline" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i> View Code
+                </a>
+            </div>
+
+            <div class="project-card card">
+                <h3>Microservices E-Commerce Platform</h3>
+                <p>Orchestrated cloud-native microservices architecture on <strong>Kubernetes</strong> using <strong>Helm and Helmfile</strong> for package management and deployment automation.</p>
+                <p class="tech-stack">Kubernetes, Helm, Helmfile, Docker, Microservices</p>
+                <a href="https://github.com/TheSudheer/Online-Bouquet" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i> View Code
+                </a>
+            </div>
+
+            <div class="project-card card">
+                <h3>Terraform CI/CD Integration with AWS</h3>
+                <p>End-to-end CI/CD pipeline orchestrating build, <strong>Infrastructure as Code (Terraform)</strong> provisioning, and Docker Compose deployment of Java application with PostgreSQL on <strong>AWS EC2</strong>. Automated infrastructure provisioning and application deployment.</p>
+                <p class="tech-stack">Jenkins, Terraform, Docker, Docker Compose, AWS EC2, PostgreSQL</p>
+                <a href="https://github.com/TheSudheer/terraform-cicd-integration" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i> View Code
+                </a>
+            </div>
+
+            <div class="project-card card">
+                <h3>Java Gradle Project with Nexus & Docker Hub</h3>
+                <p>Spring Boot web application with complete CI/CD pipeline. Features include <strong>Maven Publishing to Nexus</strong>, Docker image builds, <strong>Jenkins Shared Library integration</strong>, and GitHub Webhooks for automated build triggers.</p>
+                <p class="tech-stack">Jenkins, Gradle, Docker, Nexus, GitHub Webhooks, Spring Boot</p>
+                <a href="https://github.com/TheSudheer/java-gradle-project" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i> View Code
+                </a>
+            </div>
+
+            <div class="project-card card">
+                <h3>Jenkins CI/CD Pipeline for AWS EKS</h3>
+                <p>Foundational CI/CD workflow demonstrating <strong>Jenkins integration with AWS EKS</strong>. Features secure AWS authentication, dynamic kubeconfig setup, connectivity validation, and automated Kubernetes deployments.</p>
+                <p class="tech-stack">Jenkins, AWS EKS, Kubernetes, kubectl, AWS CLI</p>
+                <a href="https://github.com/TheSudheer/eks-project" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i> View Code
+                </a>
             </div>
         </section>
 
+        <section id="blog" class="section">
+            <h2 class="section-title"><i class="fas fa-pen-fancy"></i> BLOG & ADDITIONAL ACTIVITIES</h2>
+            <div class="card">
+                <h3><i class="fas fa-blog"></i> Technical Writing</h3>
+                <p>Actively writing and sharing educational content about <strong>Linux, DevOps, and Cloud Technologies</strong> to help others learn and grow in the field.</p>
+                <p style="margin-top: 15px;">Topics covered include:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Linux system administration and troubleshooting</li>
+                    <li>DevOps best practices and tooling</li>
+                    <li>Cloud infrastructure and automation</li>
+                    <li>Container orchestration with Kubernetes</li>
+                    <li>CI/CD pipeline design and implementation</li>
+                </ul>
+                <a href="https://chaoticcontainers.hashnode.dev/" target="_blank" class="blog-link" style="margin-top: 20px;">
+                    <i class="fas fa-external-link-alt"></i> Visit My Blog - Chaotic Containers
+                </a>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> EDUCATION</h2>
+            <div class="job-card card">
+                <h3>Bachelor of Technology in Electrical and Electronics</h3>
+                <p class="duration">Aditya College of Engineering & Technology, Surampalem</p>
+                <p>Graduated: 2024 | <strong>CGPA: 7.09</strong></p>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 Sudheer Pithani | Built with <i class="fas fa-heart"></i> and **DevOps Principles**</p>
-        <p>Education: B.Tech in Electrical and Electronics, 2024 (CGPA: 7.09)</p>
+        <p>&copy; 2025 Sudheer Pithani. All rights reserved.</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
