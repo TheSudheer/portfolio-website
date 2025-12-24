@@ -165,16 +165,39 @@ body.light-mode {
     padding: 40px 0; 
 }
 
-.section { 
-    margin-bottom: 40px; 
+.section {
+    margin-bottom: 40px;
+    transition: opacity 0.3s ease;
 }
 
 .section-title {
-    font-size: 1.6rem; 
-    color: var(--primary-color); 
+    font-size: 1.6rem;
+    color: var(--primary-color);
     margin-bottom: 20px;
-    border-left: 5px solid var(--accent-color); 
+    border-left: 5px solid var(--accent-color);
     padding-left: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    transition: width 0.4s ease;
+}
+
+.section:hover .section-title::after {
+    width: 100%;
+}
+
+.section:hover .section-title {
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+    transform: translateX(5px);
 }
 
 .card {
@@ -183,12 +206,30 @@ body.light-mode {
     border-radius: 12px;
     border: 1px solid var(--border-color); 
     box-shadow: 0 4px 15px var(--shadow-color);
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.card:hover { 
-    transform: translateY(-3px); 
-    box-shadow: 0 6px 20px var(--shadow-color); 
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-color), 0 0 20px rgba(56, 189, 248, 0.2);
+    border-color: var(--primary-color);
+}
+
+.card:hover::before {
+    left: 100%;
 }
 
 .contact-bar { 
@@ -208,7 +249,21 @@ body.light-mode {
 
 .skill-category h3 { 
     color: var(--primary-color); 
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.skill-category:hover h3 {
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+    transform: scale(1.05);
+}
+
+.skill-category p {
+    transition: color 0.3s ease;
+}
+
+.skill-category:hover p {
+    color: var(--primary-color);
 }
 
 .job-card h3 { 
@@ -231,16 +286,51 @@ body.light-mode {
 }
 
 .job-card li { 
-    margin-bottom: 8px; 
+    margin-bottom: 12px;
+    padding-left: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.job-card li::before {
+    content: '▹';
+    position: absolute;
+    left: -15px;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.job-card li:hover {
+    transform: translateX(8px);
+    color: var(--primary-color);
+}
+
+.job-card li:hover::before {
+    transform: translateX(-3px);
 }
 
 .project-card { 
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .project-card h3 { 
     color: var(--text-color); 
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.project-card:hover h3 {
+    color: var(--primary-color);
+}
+
+.project-card p {
+    transition: color 0.3s ease;
+}
+
+.project-card:hover p {
+    color: var(--text-color);
 }
 
 .tech-stack {
@@ -262,11 +352,31 @@ body.light-mode {
     align-items: center; 
     gap: 5px; 
     margin-top: 10px;
-    transition: color 0.2s;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 8px 12px;
+    border-radius: 6px;
 }
 
-.github-link:hover { 
-    color: var(--primary-color); 
+.github-link::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 6px;
+    background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.github-link:hover {
+    color: #0d1117;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+.github-link:hover::before {
+    opacity: 1;
 }
 
 .blog-link {
@@ -277,11 +387,31 @@ body.light-mode {
     align-items: center; 
     gap: 5px; 
     margin-top: 10px;
-    transition: color 0.2s;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 8px 12px;
+    border-radius: 6px;
 }
 
-.blog-link:hover { 
-    color: var(--accent-color); 
+.blog-link::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 6px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.blog-link:hover {
+    color: #0d1117;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4);
+}
+
+.blog-link:hover::before {
+    opacity: 1;
 }
 
 .footer { 
